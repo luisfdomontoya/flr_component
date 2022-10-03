@@ -11,15 +11,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Material App',
-        initialRoute: 'home',
-        routes: {
-          'home': (context) => const HomeScreen(),
-          'listview1': (context) => const Listview1Screen(),
-          'listview2': (context) => const Listview2Screen(),
-          'alert': (context) => const AlertScreen(),
-          'card': (context) => const CardScreen(),
-        });
+      debugShowCheckedModeBanner: false,
+      title: 'Material App',
+      initialRoute: 'home',
+      routes: {
+        'home': (context) => const HomeScreen(),
+        'listview1': (context) => const Listview1Screen(),
+        'listview2': (context) => const Listview2Screen(),
+        'alert': (context) => const AlertScreen(),
+        'card': (context) => const CardScreen(),
+      },
+      onGenerateRoute: (settings) {
+        print('settings'); //este print lo puse únicamente para
+        //mostrar que el argumento settings contiene la ruta errónea
+        //y por lo tanto la puedo usar para lo que necesite.
+        return MaterialPageRoute(
+          builder: (context) => const AlertScreen(),
+        );
+      },
+    );
   }
 }
