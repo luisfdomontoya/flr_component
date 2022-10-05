@@ -1,4 +1,4 @@
-import 'package:flr_component/screens/screens.dart';
+// import 'package:flr_component/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
                   // final route = MaterialPageRoute(
                   //   builder: (context) => const Listview1Screen(),
                   // );
-                  Navigator.pushNamed(context, 'test');
+                  Navigator.pushNamed(context, 'Wrong Route');
                 },
               ),
           separatorBuilder: (_, __) => const Divider(),
