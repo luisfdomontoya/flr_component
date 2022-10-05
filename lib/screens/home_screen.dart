@@ -1,4 +1,5 @@
 // import 'package:flr_component/screens/screens.dart';
+import 'package:flr_component/router/app_routes.dart';
 import 'package:flutter/material.dart';
 
 /// El widget HomeScreen lo uso para crear mi pantalla inicial,
@@ -8,6 +9,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final menuOptions = AppRoutes.menuOptions;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Components in Flutter'),
@@ -15,17 +18,17 @@ class HomeScreen extends StatelessWidget {
       ),
       body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
-                leading: const Icon(Icons.access_time_filled_outlined),
-                title: const Text('Name of route'),
+                leading: Icon(menuOptions[index].icon, color: Colors.indigo),
+                title: Text(menuOptions[index].name),
                 onTap: () {
                   // final route = MaterialPageRoute(
                   //   builder: (context) => const Listview1Screen(),
                   // );
-                  Navigator.pushNamed(context, 'listview2');
+                  Navigator.pushNamed(context, menuOptions[index].route);
                 },
               ),
           separatorBuilder: (_, __) => const Divider(),
-          itemCount: 10),
+          itemCount: menuOptions.length),
     );
   }
 }
