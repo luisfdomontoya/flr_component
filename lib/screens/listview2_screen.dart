@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+/// El widget Listview2Screen me crea una lista de elementos
+/// CON Separador entre los elementos de la lista */
 class Listview2Screen extends StatelessWidget {
   final options = const ['Megaman', 'Metal', 'Super Smash', 'Final Fantasy'];
 

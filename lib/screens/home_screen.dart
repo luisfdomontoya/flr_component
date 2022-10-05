@@ -1,6 +1,8 @@
 // import 'package:flr_component/screens/screens.dart';
 import 'package:flutter/material.dart';
 
+/// El widget HomeScreen lo uso para crear mi pantalla inicial,
+/// contiene una lista estática CON Separador de 10 elementos*/
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -19,7 +21,7 @@ class HomeScreen extends StatelessWidget {
                   // final route = MaterialPageRoute(
                   //   builder: (context) => const Listview1Screen(),
                   // );
-                  Navigator.pushNamed(context, 'Wrong Route');
+                  Navigator.pushNamed(context, 'listview2');
                 },
               ),
           separatorBuilder: (_, __) => const Divider(),
