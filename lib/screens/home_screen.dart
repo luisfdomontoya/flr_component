@@ -1,5 +1,6 @@
 // import 'package:flr_component/screens/screens.dart';
 import 'package:flr_component/router/app_routes.dart';
+import 'package:flr_component/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 /// El widget HomeScreen lo uso para crear mi pantalla inicial,
@@ -18,7 +19,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
-                leading: Icon(menuOptions[index].icon, color: Colors.indigo),
+                leading: Icon(menuOptions[index].icon, color: AppTheme.primary),
                 title: Text(menuOptions[index].name),
                 onTap: () {
                   Navigator.pushNamed(context, menuOptions[index].route);

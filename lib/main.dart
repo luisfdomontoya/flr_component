@@ -1,5 +1,6 @@
 // Llama el archivo de exportaciones llamado screens.dart
 import 'package:flr_component/router/app_routes.dart';
+import 'package:flr_component/theme/app_theme.dart';
 
 import 'package:flutter/material.dart';
 
@@ -11,20 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Material App',
-      initialRoute: AppRoutes.initialRoute,
-      routes: AppRoutes.getAppRoutes(),
-      onGenerateRoute: AppRoutes.onGenerateRoute,
-      theme: ThemeData.light().copyWith(
-        //Color primario
-        primaryColor: Colors.indigo,
-
-        //AppBar theme
-        appBarTheme: const AppBarTheme(
-          color: Colors.red,
-        ),
-      ),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Material App',
+        initialRoute: AppRoutes.initialRoute,
+        routes: AppRoutes.getAppRoutes(),
+        onGenerateRoute: AppRoutes.onGenerateRoute,
+        theme: AppTheme.lightTheme);
   }
 }
