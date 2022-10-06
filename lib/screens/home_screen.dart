@@ -21,9 +21,6 @@ class HomeScreen extends StatelessWidget {
                 leading: Icon(menuOptions[index].icon, color: Colors.indigo),
                 title: Text(menuOptions[index].name),
                 onTap: () {
-                  // final route = MaterialPageRoute(
-                  //   builder: (context) => const Listview1Screen(),
-                  // );
                   Navigator.pushNamed(context, menuOptions[index].route);
                 },
               ),
