@@ -16,9 +16,16 @@ class CardScreen extends StatelessWidget {
         children: const [
           CustomCardType1(),
           SizedBox(height: 10),
-          CustomCardType2(),
+          CustomCardType2(
+            imageUrl:
+                'https://cdn3.dpmag.com/2021/07/Landscape-Tips-Mike-Mezeul-II.jpg',
+            imageDescription: 'A beautiful landscape',
+          ),
           SizedBox(height: 10),
-          CustomCardType2(),
+          CustomCardType2(
+            imageUrl:
+                'https://cdn3.dpmag.com/2021/07/Landscape-Tips-1-Mike-Mezeul-II.jpg',
+          ),
           SizedBox(height: 10),
         ],
       ),
