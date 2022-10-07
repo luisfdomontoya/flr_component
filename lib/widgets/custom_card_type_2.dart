@@ -37,7 +37,7 @@ class CustomCardType2 extends StatelessWidget {
                 top: 10,
                 bottom: 10,
               ),
-              child: Text(imageDescription ?? 'No title specified'),
+              child: Text(imageDescription!),
             ),
         ],
       ),
