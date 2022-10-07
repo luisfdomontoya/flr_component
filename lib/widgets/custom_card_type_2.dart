@@ -24,8 +24,12 @@ class CustomCardType2 extends StatelessWidget {
           ),
           Container(
             alignment: AlignmentDirectional.centerEnd,
-            padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
-            child: Text('Un hermoso paisaje'),
+            padding: const EdgeInsets.only(
+              right: 20,
+              top: 10,
+              bottom: 10,
+            ),
+            child: const Text('Un hermoso paisaje'),
           ),
         ],
       ),
