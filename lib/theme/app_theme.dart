@@ -14,7 +14,7 @@ class AppTheme {
       elevation: 0,
     ),
 
-    //TextButton Theme: estos serían los estilos para todos mis appBar
+    //TextButton Theme: estos serían los estilos para todos mis TextButton
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(foregroundColor: primary),
     ),
