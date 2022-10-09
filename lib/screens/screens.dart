@@ -12,3 +12,4 @@ export 'package:flr_component/screens/card_screen.dart';
 export 'package:flr_component/screens/home_screen.dart';
 export 'package:flr_component/screens/listview1_screen.dart';
 export 'package:flr_component/screens/listview2_screen.dart';
+export 'package:flr_component/screens/avatar_screen.dart';
