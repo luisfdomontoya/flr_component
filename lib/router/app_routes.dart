@@ -15,12 +15,12 @@ class AppRoutes {
         icon: Icons.home_max_sharp),
     MenuOption(
         route: 'listview1',
-        name: 'Listview type 1',
+        name: 'Listview Type 1',
         screen: const Listview1Screen(),
         icon: Icons.list_alt),
     MenuOption(
         route: 'listview2',
-        name: 'Listview type 2',
+        name: 'Listview Type 2',
         screen: const Listview2Screen(),
         icon: Icons.list),
     MenuOption(
@@ -38,6 +38,11 @@ class AppRoutes {
         name: 'Avatar',
         screen: const AvatarScreen(),
         icon: Icons.supervised_user_circle_outlined),
+    MenuOption(
+        route: 'animated',
+        name: 'Animated Container',
+        screen: const AnimatedScreen(),
+        icon: Icons.play_circle_outline_rounded),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {

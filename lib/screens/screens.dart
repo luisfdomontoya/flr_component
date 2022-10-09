@@ -13,3 +13,4 @@ export 'package:flr_component/screens/home_screen.dart';
 export 'package:flr_component/screens/listview1_screen.dart';
 export 'package:flr_component/screens/listview2_screen.dart';
 export 'package:flr_component/screens/avatar_screen.dart';
+export 'package:flr_component/screens/animated_screen.dart';
