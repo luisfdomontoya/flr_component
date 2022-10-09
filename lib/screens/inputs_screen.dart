@@ -9,7 +9,23 @@ class InputsScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Inputs and Forms'),
       ),
-      body: SingleChildScrollView(),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 10,
+          ),
+          child: Column(
+            children: [
+              TextFormField(
+                autofocus: true,
+                initialValue: 'Luis Montoya',
+                textCapitalization: TextCapitalization.words,
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
