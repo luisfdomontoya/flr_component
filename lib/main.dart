@@ -1,7 +1,6 @@
 // Llama el archivo de exportaciones llamado screens.dart
 import 'package:flr_component/router/app_routes.dart';
 import 'package:flr_component/theme/app_theme.dart';
-
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
