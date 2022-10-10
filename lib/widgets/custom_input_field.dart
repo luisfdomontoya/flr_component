@@ -6,6 +6,8 @@ class CustomInputField extends StatelessWidget {
   final String? helperText;
   final IconData? icon;
   final IconData? suffixIcon;
+  final TextInputType? keyboardType;
+  final bool obscureText;
 
   const CustomInputField({
     Key? key,
@@ -14,6 +16,8 @@ class CustomInputField extends StatelessWidget {
     this.helperText,
     this.icon,
     this.suffixIcon,
+    this.keyboardType,
+    this.obscureText = false,
   }) : super(key: key);
 
   @override
@@ -22,6 +26,11 @@ class CustomInputField extends StatelessWidget {
       autofocus: true,
       initialValue: '',
       textCapitalization: TextCapitalization.words,
+      keyboardType: keyboardType, //establezco qué tipo de input es, por ejemplo
+      //de texto o email. Para inputs de tipo contraseña se usa otra propiedad.
+      obscureText:
+          obscureText, //Se usa para los input tipo contraseña y permite que
+      //los caracteres que ingresemos se vean como puntos.
       // value contiene el valor del input
       onChanged: (value) => print('value: $value'),
       validator: (value) {
@@ -34,9 +43,9 @@ class CustomInputField extends StatelessWidget {
         labelText: labelText,
         helperText: helperText,
         counterText: '3 characters',
-        suffixIcon: Icon(suffixIcon),
+        suffixIcon: suffixIcon == null ? null : Icon(suffixIcon),
         prefixIcon: const Icon(Icons.verified_user_outlined),
-        icon: Icon(icon),
+        icon: icon == null ? null : Icon(icon),
         // border: OutlineInputBorder(
         //   borderRadius: BorderRadius.only(
         //     bottomLeft: Radius.circular(10),
