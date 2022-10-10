@@ -6,6 +6,10 @@ class InputsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //Creo una key de tipo form (FormState) que usaré en mi widget Form.
+    //Este key se usa para mantener el estado de ese formulario.
+    final GlobalKey<FormState> myFormKey = GlobalKey<FormState>();
+
     final Map<String, String> formValues = {
       'first_name': 'Luis',
       'last_name': 'Montoya',
@@ -25,6 +29,7 @@ class InputsScreen extends StatelessWidget {
             vertical: 10,
           ),
           child: Form(
+            key: myFormKey, //asignamos el key al formulario
             child: Column(
               children: [
                 const CustomInputField(
@@ -50,7 +55,23 @@ class InputsScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 30),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    FocusScope.of(context).requestFocus(FocusNode()); //quita el
+                    //teclado de la pantalla apenas doy clic sobre el botón.
+
+                    //el primer ! es para negar y el segundo ! es para decirle a
+                    //flutter que confíe en nosotros que currentState no va a
+                    //llegar nullo. Otra cosa que se puede hacer es la evalucación
+                    //con el operador ?? o con el operador ternario.
+                    //.validate() me dice si el formulario es válido o no, y
+                    //además dispara todas las validaciones de todos los inputs
+                    //que tenga el formulario.
+                    if (!myFormKey.currentState!.validate()) {
+                      print('formulario no válido');
+                      return;
+                    }
+                    print(formValues);
+                  },
                   child: const SizedBox(
                     width: double.infinity,
                     child: Center(

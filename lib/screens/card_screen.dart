@@ -25,7 +25,7 @@ class CardScreen extends StatelessWidget {
           CustomCardType2(
             imageUrl:
                 'https://cdn3.dpmag.com/2021/07/Landscape-Tips-1-Mike-Mezeul-II.jpg',
-            imageDescription: null,
+            imageDescription: 'this a old card',
           ),
           SizedBox(height: 10),
           CustomCardType2(
