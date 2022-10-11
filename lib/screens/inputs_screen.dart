@@ -64,13 +64,22 @@ class InputsScreen extends StatelessWidget {
                 const SizedBox(height: 30),
                 DropdownButtonFormField<String>(
                   items: const [
-                    DropdownMenuItem(value: 'Admin', child: Text('Admin')),
                     DropdownMenuItem(
-                        value: 'Superuser', child: Text('Superuser')),
+                      value: 'Admin',
+                      child: Text('Admin'),
+                    ),
                     DropdownMenuItem(
-                        value: 'Developer', child: Text('Developer')),
+                      value: 'Superuser',
+                      child: Text('Superuser'),
+                    ),
                     DropdownMenuItem(
-                        value: 'Jr. Developer', child: Text('Jr. Developer')),
+                      value: 'Developer',
+                      child: Text('Developer'),
+                    ),
+                    DropdownMenuItem(
+                      value: 'Jr. Developer',
+                      child: Text('Jr. Developer'),
+                    ),
                   ],
                   onChanged: (value) {
                     formValues['role'] = value ?? 'Admin';
@@ -80,7 +89,7 @@ class InputsScreen extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     FocusScope.of(context).requestFocus(FocusNode()); //quita el
-                    //teclado de la pantalla apenas doy clic sobre el botón.
+                    //teclado de la pantalla apenas doy clic sobre este botón.
 
                     //el primer ! es para negar y el segundo ! es para decirle a
                     //flutter que confíe en nosotros que currentState no va a
