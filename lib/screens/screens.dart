@@ -16,3 +16,4 @@ export 'package:flr_component/screens/avatar_screen.dart';
 export 'package:flr_component/screens/animated_screen.dart';
 export 'package:flr_component/screens/inputs_screen.dart';
 export 'package:flr_component/screens/slider_screen.dart';
+export 'package:flr_component/screens/listview_builder_screen.dart';
